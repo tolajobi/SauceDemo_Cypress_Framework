@@ -5,8 +5,9 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 
 export default defineConfig({
   e2e: {
+    pageLoadTimeout: 120000,
     // Support file configuration
-    //supportFile: "cypress/support",
+    //supportFile: "cypress/support/cypress.config.ts",
     // Conditional spec pattern based on the branch
     specPattern: process.env.BRANCH === "specific-branch"
       ? "custom/path/**/*.feature"
