@@ -1,6 +1,6 @@
 Feature: Order Multiple Items And View Tax
 
-@RemoveItem
+@OrderItemTax
 Scenario: Verify user can Order Multiple Items And View Tax
   Given browser is open
   When user is on the main page "https://www.saucedemo.com/"
