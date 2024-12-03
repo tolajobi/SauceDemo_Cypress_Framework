@@ -29,19 +29,19 @@ When('user clicks the login button', () => {
     loginPage.clickLogin();
 });
 
-Then('user selects item {string}', (item) => {
+When('user selects item {string}', (item) => {
     orderItemPage.selectItem(item);
 });
 
-Then('user add item to the cart', () => {
+When('user add item to the cart', () => {
     orderItemPage.addItemToCart();
 });
 
-Then('user selects shopping cart', () => {
+When('user selects shopping cart', () => {
     basePage.selectShoppingCart();
 });
 
-Then('user selects checkout', () => {
+When('user selects checkout', () => {
     basePage.selectCheckout();
 });
 

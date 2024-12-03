@@ -5,13 +5,20 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 
 export default defineConfig({
   e2e: {
-    pageLoadTimeout: 10000,
+    // Configure retries
+    retries: {
+      runMode: 2, // Retries during `cypress run`
+      openMode: 0, // No retries during `cypress open`
+    },
+
     // Support file configuration
     //supportFile: "cypress/support/cypress.config.ts",
+
     // Conditional spec pattern based on the branch
     specPattern: process.env.BRANCH === "specific-branch"
       ? "custom/path/**/*.feature"
       : "cypress/e2e/*.feature",
+
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
