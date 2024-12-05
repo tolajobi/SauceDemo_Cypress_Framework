@@ -36,7 +36,7 @@ class BasePage {
     }
 
     itemListDropdownOption(option) {
-        cy.wait(5000);
+        //cy.wait(5000);
         this.elements.productSort().select(option);
     }
 
