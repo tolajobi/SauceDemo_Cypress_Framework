@@ -2,7 +2,6 @@
 
 class BasePage {
     elements = {
-
         shoppingCart: () => cy.get('.shopping_cart_link'),
         menuButton: () => cy.get('#react-burger-menu-btn'),
         checkoutButton: () => cy.get('[data-test="checkout"]'),
@@ -10,9 +9,14 @@ class BasePage {
         finishButton: () => cy.get('[data-test="finish"]'),
         thankYouMessage: () => cy.get('.complete-header'),
         productSort: () => cy.get('[data-test="product-sort-container"]'),
-        errorMessage: () => cy.get('[data-test="error"]')
+        errorMessage: () => cy.get('[data-test="error"]'),
+        backHomeButton: () => cy.get('#back-to-products')
     }
     
+    clikckOnBackButton() {
+        this.elements.backHomeButton().click();
+    }
+
     selectShoppingCart() {
         this.elements.shoppingCart().click();
     }

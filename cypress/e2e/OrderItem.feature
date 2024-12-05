@@ -1,12 +1,5 @@
 Feature: Order item
 
-  Background:
-    Given browser is open
-    And user is on the main page "https://www.saucedemo.com/"
-    When user enters the username
-    And user enters the password
-    And user clicks the login button
-
   @OrderItem
   Scenario Outline: Verify user can order items
     When user selects item "<item>"

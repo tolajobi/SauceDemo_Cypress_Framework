@@ -9,11 +9,16 @@ const loginPage = new SDLoginPage();
 const basePage = new BasePage();
 const orderItemPage = new OrderItemPage();
 
-
-Given('browser is open', () => {
-});
+before(() => {
+    loginPage.navigateToLoginPage("https://www.saucedemo.com/");
+    loginPage.enterUsername();
+    loginPage.enterPassword();
+    loginPage.clickLogin();
+})
 
 When('user is on the main page {string}', (url) => {
+    cy.clearAllSessionStorage();
+    cy.clearCookies();
     loginPage.navigateToLoginPage(url);
 });
 
@@ -67,6 +72,7 @@ When('user clicks finish', () => {
 
 Then('the thank you message should be presented', () => {
     basePage.verifyThankYouMessage();
+    basePage.clikckOnBackButton();
 });
 
 Then('error message {string} should be displayed', (errorMessage) => {

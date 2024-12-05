@@ -5,6 +5,8 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 
 export default defineConfig({
   e2e: {
+    baseUrl: "https://www.saucedemo.com",
+    testIsolation: false,
     // Configure retries
     retries: {
       runMode: 2, // Retries during `cypress run`
