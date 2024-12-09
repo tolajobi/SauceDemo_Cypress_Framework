@@ -32,5 +32,5 @@
       "formatter": "cucumber-json-formatter",
       "output": "cypress/reports/cucumber-json/cucumber-report.json"
     }
-  }  
+  }
 }

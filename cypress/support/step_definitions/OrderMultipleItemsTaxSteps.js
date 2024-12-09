@@ -9,7 +9,6 @@ import BasePage from '../pages/BasePage';
 const loginPage = new SDLoginPage();
 const basePage = new BasePage();
 const orderMultipleItemsTaxPage = new OrderMultipleItemsTaxPage();
- 
 
 When('user selects {string} from the dropdown', (option) => {
 	basePage.itemListDropdownOption(option);

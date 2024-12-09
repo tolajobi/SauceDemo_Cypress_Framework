@@ -1,11 +1,11 @@
 Feature: Order Multiple Items And View Tax
 
-  Background:
-    Given browser is open
-    And user is on the main page "https://www.saucedemo.com/"
-    When user enters the username
-    And user enters the password
-    And user clicks the login button
+  # Background:
+  #   Given browser is open
+  #   And user is on the main page "https://www.saucedemo.com/"
+  #   When user enters the username
+  #   And user enters the password
+  #   And user clicks the login button
 
   @OrderItemTax
   Scenario: Verify user can Order Multiple Items And View Tax
