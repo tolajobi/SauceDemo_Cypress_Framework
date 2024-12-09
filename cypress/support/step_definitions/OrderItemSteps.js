@@ -78,5 +78,3 @@ Then('the thank you message should be presented', () => {
 Then('error message {string} should be displayed', (errorMessage) => {
     basePage.verifyErrorMessage(errorMessage);
 });
-
-
