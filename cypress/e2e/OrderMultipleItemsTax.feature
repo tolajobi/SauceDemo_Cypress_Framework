@@ -7,7 +7,7 @@ Feature: Order Multiple Items And View Tax
   #   And user enters the password
   #   And user clicks the login button
 
-  @OrderItemTax
+  @RegressionTest
   Scenario: Verify user can Order Multiple Items And View Tax
     When user selects "Price (low to high)" from the dropdown
     And user selects item "bike-light"
@@ -22,7 +22,7 @@ Feature: Order Multiple Items And View Tax
     And user clicks finish
     Then the thank you message should be presented
 
-  @OrderMultipleItemTax
+  @RegressionTest
   Scenario Outline: Verify user can Order Multiple Items And View Tax with different items
     When user selects item "<item>"
     And user selects item "<item2>"

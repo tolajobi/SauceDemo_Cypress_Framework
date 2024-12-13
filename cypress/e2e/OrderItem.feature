@@ -1,6 +1,6 @@
 Feature: Order item
 
-  @OrderItem
+  @RegressionTest
   Scenario Outline: Verify user can order items
     When user selects item "<item>"
     And user add item to the cart
@@ -21,7 +21,7 @@ Feature: Order item
       | fleece-jacket |
       | onesie        |
 
-  @NegativeTest
+  @SmokeTest
   Scenario: Verify error message when required fields are missing during checkout
     When user selects item "backpack"
     And user add item to the cart
